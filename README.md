@@ -2,6 +2,11 @@
 
 ## .NET 6 and EntityFramework
 - References
+  - https://www.c-sharpcorner.com/article/asp-net-core-entity-framework-call-store-procedure/
+  - https://referbruv.com/blog/working-with-stored-procedures-in-aspnet-core-ef-core/
+  - https://www.c-sharpcorner.com/article/apiasp-net-core-web-api-entity-framewor-call-stored-procedure-part-ii/
+  - https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/work-with-data-in-asp-net-core-apps
+  - https://stackoverflow.com/questions/20901419/how-to-call-stored-procedure-in-entity-framework-6-code-first
 - NuGet packages
   - Microsoft.EntityFrameworkCore.SqlServer
   - Microsoft.EntityFrameworkCore.Tools
