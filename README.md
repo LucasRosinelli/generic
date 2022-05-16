@@ -58,9 +58,63 @@
   ```csharp
   builder.Services.AddSqlServer<TestsEntityFrameworkContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
   ```
+- `appSettings.json`:
+  ```json
+  {
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*"
+  }
+  ```
 - `appSettings.Development.json`
-  ```xml
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=TestsEntityFramework;User Id=sa;Password=Pa55w0rd;"
+  ```json
+  {
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Database=TestsEntityFramework;User Id=sa;Password=Pa55w0rd;"
+    }
+  }
+  ```
+- `Properties/launchSettings.json`:
+  ```json
+  {
+    "$schema": "https://json.schemastore.org/launchsettings.json",
+    "iisSettings": {
+      "windowsAuthentication": false,
+      "anonymousAuthentication": true,
+      "iisExpress": {
+        "applicationUrl": "http://localhost:9517",
+        "sslPort": 44313
+      }
+    },
+    "profiles": {
+      "Cadagil.PoC.TestsEntityFramework.Api": {
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": true,
+        "launchUrl": "swagger",
+        "applicationUrl": "https://localhost:7039;http://localhost:5039",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      },
+      "IIS Express": {
+        "commandName": "IISExpress",
+        "launchBrowser": true,
+        "launchUrl": "swagger",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      }
+    }
   }
   ```
