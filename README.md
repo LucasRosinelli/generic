@@ -52,6 +52,15 @@
       {
           return MyTests.FromSqlRaw($"EXEC ListTests").ToListAsync();
       }
+
+      public async Task<MyTest?> GetByIdAsync(int id)
+      {
+          var idParam = new SqlParameter("@Id", SqlDbType.Int);
+          idParam.Value = id;
+
+          var result = await MyTests.FromSqlRaw("EXEC ListTestsById @Id", idParam).ToListAsync();
+          return result.FirstOrDefault();
+      }
   }
   ```
 - `Startup`:
