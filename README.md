@@ -1,4 +1,4 @@
-# generic
+# Generic
 
 ## .NET 6 and EntityFramework
 - References
@@ -50,7 +50,7 @@
 
       public Task<List<MyTest>> ListAllAsync()
       {
-          return MyTests.FromSqlRaw($"EXEC ListTests").ToListAsync();
+          return MyTests.FromSqlRaw("EXEC ListTests").ToListAsync();
       }
 
       public async Task<MyTest?> GetByIdAsync(int id)
